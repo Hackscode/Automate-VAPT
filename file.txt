@@ -1,0 +1,5 @@
+//script[@id='ssl-cert']
+//script[@id='http-title']
+//script[@id='ssh-hostkey']
+//service[@name='microsoft-ds']
+//service[@name='telnet']

@@ -1,0 +1,17 @@
+[07.17.2016]
+    Released..: 2.2
+    Fixed.....: Replaced feature which allows you to specify extra ports to look for for HTTP or HTTPS services when parsing XML.
+    Modified..: Modified XML parsing to no longer perform DOM based parsing and switched to SAX based parsing. (this was in a previous release but no changelog entry was made)
+
+[05.11.2016]
+	Updated...: Fixed bug in XML parsing (Issue #187).  Mac address is now ignored.  This value was used instead of the IP when NMap is able to identify the MAC address of the system.
+
+[10.3.2015]
+    Updated...: User output changed to reflect the fact EyeWitness scans services, not hosts.  Thanks @digininja
+    Updated...: Create targets now correctly parses for rdp, vnc, and web, not only web.  Thanks @digininja for letting us know!
+
+[6.25.2015]
+    Fixed.....: Fixed search page links
+
+[6.15.2015]
+    Released..: EyeWitness 2.0 released!
