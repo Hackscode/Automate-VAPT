@@ -71,6 +71,7 @@ then
 echo netbios
 rm -rf ppss_dir/
 pme=$(prime $var)
+dos2unix ../scripts/microsoft.sh
 ppss -f $var -c 'bash ../scripts/microsoft.sh "$ITEM"' -p $pme
 fi
 if [ $var1 == "telnet" ]
