@@ -64,6 +64,7 @@ then
 echo http
 rm -rf ppss_dir/
 pme=$(prime $var)
+dos2unix ../scripts/http.sh
 ppss -f $var -c 'bash ../scripts/http.sh "$ITEM"' -p $pme
 fi
 if [ $var1 == "microsoft" ]
@@ -79,6 +80,7 @@ then
 echo telnet
 rm -rf ppss_dir/
 pme=$(prime $var)
+dos2unix ../scripts/telnet.sh
 ppss -f $var -c 'bash ../scripts/telnet.sh "$ITEM"' -p $pme
 fi
 if [ $var1 == "ssh" ]
@@ -86,6 +88,7 @@ then
 echo ssh
 rm -rf ppss_dir/
 pme=$(prime $var)
+dos2unix ../scripts/ssh.sh
 ppss -f $var -c 'bash ../scripts/ssh.sh "$ITEM"' -p $pme
 fi
 if [ $var1 == "ssl" ]
@@ -93,6 +96,7 @@ then
 echo ssl
 rm -rf ppss_dir/
 pme=$(prime $var)
+dos2unix ../scripts/ssl.sh
 ppss -f $var -c 'bash ../scripts/ssl.sh "$ITEM"' -p $pme
 fi
 fi
