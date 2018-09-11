@@ -1,10 +1,10 @@
 #if [[ $1 == *":"* ]];
 #then var="$1"
-mkdir -p `pwd`/http/http_trace
-mkdir -p `pwd`/http/nikto
-mkdir -p `pwd`/http/EyeWitness
-mkdir -p `pwd`/http/http_methods
-mkdir -p `pwd`/http/http_headers
+mkdir -p `pwd`/http/http_trace/
+mkdir -p `pwd`/http/nikto/
+mkdir -p `pwd`/http/EyeWitness/
+mkdir -p `pwd`/http/http_methods/
+mkdir -p `pwd`/http/http_headers/
 
 echo $1
 IFS=':' read var1 var2 <<< "$1"
