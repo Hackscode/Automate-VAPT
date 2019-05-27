@@ -52,7 +52,7 @@ for i in $(cat file.txt); do
 cat $DIR/"final.xml" | xmlstarlet sel -T -t -m "$i" -m ../../.. -v address/@addr -m hostnames/hostname -i @name -o '  (' -v @name -o ')' -b -b -b -o "," -m .. -v @portid -o ',' -v @protocol -o "," -m service -v @name -i "@tunnel=''" -o 's' -b -o "," -v @product -o ' ' -b -n > output.csv
 sed -e :a -e '$!N;s/\n,/,/;ta' -e 'P;D' output.csv > output1.csv
 mv output1.csv output.csv
-cat output.csv | cut -f 1,2 -d "," | tr "," ":" | sed 's/\(.*\)\(..:..:..:..:..:..\)\(.*\)//g' | sed '/^$/d' > $DIR/$(echo $i | sed "s/'//g" | cut -f 2,2 -d "=" | cut -f 1,1 -d "-").txt ; done
+cat output.csv | cut -f 1,2 -d "," | tr "," ":" | sed 's/\(.*\)\(..:..:..:..:..:..\)\(.*\)//g' | sed '/^$/d' > $DIR/$(echo $i | sed "s/'//g" | cut -f 2,2 -d "=" | cut -f 1,1 -d "-" | tr -dc '[:alnum:]\n\r' | tr '[:upper:]' '[:lower:]').txt ; done
 cd "$(dirname "${BASH_SOURCE[0]}")"/$DIR
 for file in `pwd`/*; do if [[ ${file##*/} == *".txt"* ]];
 then var="${file##*/}"
